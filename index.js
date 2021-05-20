@@ -1,8 +1,10 @@
 "use strict"
 const { getBal, deposit, withdraw, valPin } = require('./atm');
 
-
-console.log(valPin);
-console.log(deposit);
-console.log(withdraw);
+// this line works console.log(module);
 console.log(getBal);
+
+
+//User Menu Starts Below
+
+

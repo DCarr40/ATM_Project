@@ -9,3 +9,5 @@ let davidAccount = {
     balance: 1000
 
 };
+
+module.exports.davidAccount = davidAccount ;

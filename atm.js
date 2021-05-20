@@ -1,11 +1,12 @@
 "use strict"
 const prompt = require('prompt-sync')();
-const account = require('./account');
+const davidAccount = require('./account');
 
 
 // Get Balance
-function getBalance(){ 
-    return balance;
+function getBalance(account){ 
+   // account = prompt("Who's account balance would you like to see");
+    return account = davidAccount[3].balance;
 };
 
 //withdraw
@@ -34,4 +35,4 @@ module.exports = {
     withdraw : withdraw,
     deposit : deposit,
     valPin : validatePin
-}
+};
