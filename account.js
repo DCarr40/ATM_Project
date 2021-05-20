@@ -1,4 +1,4 @@
 "use strict"
 
-let account1 = new Account();//This should create an obj
-account1.deposit(500);
+//This should create an obj
+let account1 = new Account();
