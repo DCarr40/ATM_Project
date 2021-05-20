@@ -1,4 +1,8 @@
 "use strict"
+const { getBal, deposit, withdraw, valPin } = require('./atm');
 
-const transaction = require('./atm');
-console.log(transaction);
+
+console.log(valPin);
+console.log(deposit);
+console.log(withdraw);
+console.log(getBal);
