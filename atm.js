@@ -5,8 +5,7 @@ const davidAccount = require('./account');
 
 // Get Balance
 function getBalance(account){ 
-   // account = prompt("Who's account balance would you like to see");
-    return account = davidAccount[3].balance;
+    return account.balance;
 };
 
 //withdraw
