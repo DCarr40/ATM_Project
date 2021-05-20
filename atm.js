@@ -1,9 +1,32 @@
 "use strict"
+//set balance to 0.00
+let balance = 0;
 
-function getBalance(){};
+let amount = parseInt(prompt("How much money would you like to withdraw?"));
 
-function withdraw(){};
+// Get Balance
+function getBalance(){ 
+    return balance;
+};
 
-function deposit(){};
+//withdraw
+function withdraw(){
+    balance -= amount;
+    return totalBalance;
+};
 
-function validatePin(){};
+//Create a deposit
+function deposit(amount){
+   balance += amount;
+};
+
+function validatePin(amount){
+    balance -= amount;
+};
+
+module.exports = {
+    getBal : getBalance,
+    withdraw : withdraw,
+    deposit : deposit,
+    valPin : validatePin
+}
