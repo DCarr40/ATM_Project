@@ -3,10 +3,12 @@
 const { getBal, deposit, withdraw, valPin } = require('./atm');
 
 // this line works console.log(module);
-console.log(getBal(davidAccount));
+//console.log(getBal(davidAccount));
 
 
 //User Menu Starts Below
+
+mainMenu();
 
 
 function mainMenu(){
