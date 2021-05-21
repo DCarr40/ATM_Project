@@ -10,18 +10,16 @@ function getBalance(account){
 
 //withdraw
 function withdraw(amount){
-    amount = parseInt(prompt("How much money would you like to withdraw?"));
     balance -= amount;
 };
 
 //Create a deposit
 function deposit(amount){
-    amount = parseInt(prompt("How much money would you like to deposit?"));
    balance += amount;
 };
 
-function validatePin(accountPin){
-    let accountPinAttempt = parseInt(prompt('Please Input your PIN.'));
+function validatePin(accountPinAttempt){
+    
     let accessGranted = false;
     if(accountPin === accountPinAttempt){
         accessGranted = true;

@@ -13,3 +13,12 @@ const { getBal, deposit, withdraw, valPin } = require('./atm');
 const accessAccountYesNo = await yesno({
     question = prompt("Hellow would you like to access your account?")
 });
+
+
+
+//amount = parseInt(prompt("How much money would you like to withdraw?"));
+
+
+// amount = parseInt(prompt("How much money would you like to deposit?"));
+
+//accountPinAttempt = parseInt(prompt('Please Input your PIN.'));
