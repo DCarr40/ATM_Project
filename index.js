@@ -1,5 +1,5 @@
 "use strict"
-
+const prompt =  require('prompt-sync')();
 const { getBal, deposit, withdraw, valPin } = require('./atm');
 
 // this line works console.log(module);
@@ -12,15 +12,23 @@ mainMenu();
 
 
 function mainMenu(){
-    alert("Hello Welcome to the Bank ATM Menu");
-    accessAcctYesNo(input);
+    let welcomeMessage = "Hello Welcome to the Bank ATM Menu";
+    console.log(welcomeMessage);  
+    let userInput = accessAcctYesNo();
 
-    switch(input){
+    switch(userInput){
         case "yes":
-            //TODO 
+            console.log("test");
+            //prompt for pin  
+            accountPinAttempt();
+            //validate pin 
+            //valPin
+            //go deeper if true
+            //return to main menu if false
         break;
         case "no":
             //TODO 
+            console.log(welcomeMessage);  
         break;
         default:
         return mainMenu(); // ask again
@@ -28,7 +36,8 @@ function mainMenu(){
 }
 
 function accessAcctYesNo(input){
-    input = promptFor("Would you like to access your account? Enter 'yes' or 'no'", yesNo).toLowerCase;
+    input = promptFor("Would you like to access your account? Enter 'yes' or 'no'", yesNo);
+    return input;
 }
 
 function yesNo(input){
@@ -47,4 +56,7 @@ function promptFor(question, valid){
 
 // amount = parseInt(prompt("How much money would you like to deposit?"));
 
-//accountPinAttempt = parseInt(prompt('Please Input your PIN.'));
+function accountPinAttempt(pinAttempt){
+    pinAttempt= parseInt(prompt('Please Input your PIN.'));
+    return pinAttempt;
+}
