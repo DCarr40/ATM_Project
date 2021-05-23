@@ -5,9 +5,18 @@ let davidAccount = {
 
     firstname: "David",
     lastname: "Carruthers",
-    accountPin : 12345 ,
+    accountPin: 12345,
     balance: 1000
 
 };
 
-module.exports.davidAccount = davidAccount ;
+let davidWallet = {
+
+    walletBalance: 0,
+
+}
+
+module.exports = {
+    davidAccount: davidAccount,
+    wallet : davidWallet
+};

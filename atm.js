@@ -1,35 +1,37 @@
 "use strict"
 const prompt = require('prompt-sync')();
-const davidAccount = require('./account');
-
+const { davidAccount } = require('./account');
+const {wallet} = require('./account');
 
 // Get Balance
-function getBalance(account){ 
+function getBalance(account) {
     return account.balance;
 };
 
+function getWalletBalance(wallet)
+
 //withdraw
-function withdraw(amount){
+function withdraw(amount) {
     balance -= amount;
 };
 
 //Create a deposit
-function deposit(amount){
-   balance += amount;
+function deposit(amount) {
+    balance += amount;
 };
 
-function validatePin(accountPinAttempt){
-    
-    let accessGranted = false;
-    if(accountPin === accountPinAttempt){
-        accessGranted = true;
+function validatePin(attempt) {
+    let accountPin = davidAccount.accountPin;
+    console.log(davidAccount.accountPin);
+    if (accountPin === attempt) {
+        return true;
     }
-    else{return accessGranted = false;}
+    else { return false; }
 }
 
 module.exports = {
-    getBal : getBalance,
-    withdraw : withdraw,
-    deposit : deposit,
-    valPin : validatePin
+    getBal: getBalance,
+    withdraw: withdraw,
+    deposit: deposit,
+    valPin: validatePin
 };
