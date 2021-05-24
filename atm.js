@@ -1,23 +1,25 @@
 "use strict"
 const prompt = require('prompt-sync')();
 const { davidAccount } = require('./account');
-const {wallet} = require('./account');
+const { wallet } = require('./account');
 
 // Get Balance
 function getBalance(account) {
-    return account.balance;
+    return davidAccount.balance;
 };
 
-function getWalletBalance(wallet)
+function getWalletBalance(wallet){
+
+};
 
 //withdraw
 function withdraw(amount) {
-    balance -= amount;
+    davidAccount.balance -= amount;
 };
 
 //Create a deposit
 function deposit(amount) {
-    balance += amount;
+    davidAccount.balance += amount;
 };
 
 function validatePin(attempt) {
